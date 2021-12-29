@@ -1,0 +1,283 @@
+//global
+$color-white: #fff;
+$color-black: #000;
+$font-montserrat: "Montserrat";
+$font-droid: "Droid";
+$font-logo: "Meow Script", cursive;
+$main-color: #ff7675;
+$gradient: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+
+html {
+  scroll-behavior: smooth;
+}
+//global styling
+body {
+  margin: 0;
+  padding: 0;
+  section {
+    margin: 0;
+    padding: 0;
+  }
+  .container {
+    margin: 0;
+    padding: 0;
+  }
+  a {
+    text-decoration: none;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    padding: 0;
+    margin: 0;
+  }
+}
+.section-title {
+  font-size: 22px;
+  text-transform: uppercase;
+  font-family: $font-montserrat;
+  font-weight: 600;
+  text-align: center;
+  span {
+    text-transform: none;
+    font-weight: 400;
+    color: lighten($color-black, 20%);
+  }
+}
+.section-title::after {
+  margin: auto auto;
+  display: block;
+  width: 60px;
+  height: 10px;
+  content: " ";
+  background-color: $main-color;
+}
+
+.main-title {
+  font-family: $font-montserrat;
+  text-transform: uppercase;
+  text-align: center;
+  position: relative;
+  font-size: 48px;
+}
+
+.main-title::after {
+  position: absolute;
+  left: 50%;
+  content: "";
+  transform: translateX(-50%);
+  width: 60px;
+  height: 10px;
+  background: #ff7675;
+  bottom: -12px;
+}
+
+//nav-bar styling
+.nav-bar {
+  z-index: 100;
+  position: fixed;
+  width: 100%;
+  .container {
+    .items-list {
+      display: flex;
+      .item {
+        flex: 1;
+        text-align: center;
+        position: relative;
+        a {
+          font-size: 24px;
+          font-family: $font-montserrat;
+          color: $color-white;
+          display: block;
+          padding: 20px;
+        }
+
+        &.highlight {
+          border-bottom: 3px solid gold;
+        }
+      }
+      .item::after {
+        position: absolute;
+        display: block;
+        background-color: $color-black;
+        content: " ";
+        width: 100%;
+        height: 100%;
+        top: 0;
+        z-index: -100;
+        opacity: 0.5;
+        transition: 0.8s;
+      }
+      .item:hover::after {
+        transition: 0.8s;
+        opacity: 0.8;
+      }
+    }
+  }
+}
+
+//splash styling
+.splash {
+  position: relative;
+  margin: 0;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("/images/background.jpg");
+  background-size: cover;
+  height: 100vh;
+  .inner-splash {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+    .subtitle {
+      font-size: 40px;
+      color: $color-white;
+      font-family: "Droid Serif";
+      font-weight: normal;
+    }
+
+    .title {
+      font-size: 50px;
+      color: $color-white;
+      font-family: $font-montserrat;
+      font-weight: bold;
+    }
+
+    .btn-main {
+      display: inline-block;
+      margin-top: 50px;
+      position: relative;
+      color: $color-white;
+      font-family: $font-montserrat;
+      font-size: 24px;
+      font-weight: bold;
+      padding: 20px 60px;
+    }
+
+    .btn-main::after {
+      z-index: -1;
+      position: absolute;
+      top: 50%;
+      text-align: center;
+      display: block;
+      content: " ";
+      background-color: $main-color;
+      width: 100%;
+      height: 100%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      transition: 0.7s;
+    }
+    .btn-main:hover::after {
+      filter: brightness(70%);
+    }
+  }
+}
+
+/* Layout */
+.wrapper {
+  display: flex;
+  margin-left: 10px;
+}
+
+.sidebar {
+  flex: 1 0 0;
+}
+
+.posts {
+  flex: 2 0 0;
+}
+
+.sidebar,
+.posts {
+  background: $color-white;
+  margin-right: 10px;
+  padding: 40px;
+  border: 1px solid $color-black;
+  border-radius: 5px;
+}
+
+/* post */
+.post {
+  display: none;
+  &.active {
+    display: block;
+  }
+}
+
+/* Lists */
+
+.list {
+  list-style-type: none;
+  margin: 10px 0 0 0;
+  padding: 0;
+  color: $color-black;
+  text-align: center;
+  .active {
+    font-weight: bold;
+  }
+
+  li {
+    padding: 2px;
+  }
+  a {
+    font-family: $font-droid;
+    font-size: 20px;
+    color: $color-black;
+  }
+  a:hover {
+    color: black;
+    opacity: 0.7;
+  }
+}
+
+/* logo */
+
+.blogsection {
+  padding: 120px 80px;
+  .blog {
+    .container {
+      margin-bottom: 60px;
+      text-align: center;
+      position: relative;
+      .logo {
+        font-size: 48px;
+        font-family: $font-montserrat;
+      }
+      .logo::after {
+        margin-top: 5px;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        display: block;
+        width: 60px;
+        height: 10px;
+        content: " ";
+        background-color: $main-color;
+      }
+    }
+  }
+}
+
+/* history of nysa */
+.nysa {
+  padding: 120px;
+  background: #f0f0f0;
+  p {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 20px;
+    font-family: $font-droid;
+  }
+}

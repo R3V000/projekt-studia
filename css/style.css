@@ -1,0 +1,288 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body section {
+  margin: 0;
+  padding: 0;
+}
+
+body .container {
+  margin: 0;
+  padding: 0;
+}
+
+body a {
+  text-decoration: none;
+}
+
+body ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+body h1,
+body h2,
+body h3,
+body h4,
+body h5,
+body h6 {
+  padding: 0;
+  margin: 0;
+}
+
+.section-title {
+  font-size: 22px;
+  text-transform: uppercase;
+  font-family: "Montserrat";
+  font-weight: 600;
+  text-align: center;
+}
+
+.section-title span {
+  text-transform: none;
+  font-weight: 400;
+  color: #333333;
+}
+
+.section-title::after {
+  margin: auto auto;
+  display: block;
+  width: 60px;
+  height: 10px;
+  content: " ";
+  background-color: #ff7675;
+}
+
+.main-title {
+  font-family: "Montserrat";
+  text-transform: uppercase;
+  text-align: center;
+  position: relative;
+  font-size: 48px;
+}
+
+.main-title::after {
+  position: absolute;
+  left: 50%;
+  content: "";
+  transform: translateX(-50%);
+  width: 60px;
+  height: 10px;
+  background: #ff7675;
+  bottom: -12px;
+}
+
+.nav-bar {
+  z-index: 100;
+  position: fixed;
+  width: 100%;
+}
+
+.nav-bar .container .items-list {
+  display: flex;
+}
+
+.nav-bar .container .items-list .item {
+  flex: 1;
+  text-align: center;
+  position: relative;
+}
+
+.nav-bar .container .items-list .item a {
+  font-size: 24px;
+  font-family: "Montserrat";
+  color: #fff;
+  display: block;
+  padding: 20px;
+}
+
+.nav-bar .container .items-list .item.highlight {
+  border-bottom: 3px solid gold;
+}
+
+.nav-bar .container .items-list .item::after {
+  position: absolute;
+  display: block;
+  background-color: #000;
+  content: " ";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  z-index: -100;
+  opacity: 0.5;
+  transition: 0.8s;
+}
+
+.nav-bar .container .items-list .item:hover::after {
+  transition: 0.8s;
+  opacity: 0.8;
+}
+
+.splash {
+  position: relative;
+  margin: 0;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/images/background.jpg");
+  background-size: cover;
+  height: 100vh;
+}
+
+.splash .inner-splash {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.splash .inner-splash .subtitle {
+  font-size: 40px;
+  color: #fff;
+  font-family: "Droid Serif";
+  font-weight: normal;
+}
+
+.splash .inner-splash .title {
+  font-size: 50px;
+  color: #fff;
+  font-family: "Montserrat";
+  font-weight: bold;
+}
+
+.splash .inner-splash .btn-main {
+  display: inline-block;
+  margin-top: 50px;
+  position: relative;
+  color: #fff;
+  font-family: "Montserrat";
+  font-size: 24px;
+  font-weight: bold;
+  padding: 20px 60px;
+}
+
+.splash .inner-splash .btn-main::after {
+  z-index: -1;
+  position: absolute;
+  top: 50%;
+  text-align: center;
+  display: block;
+  content: " ";
+  background-color: #ff7675;
+  width: 100%;
+  height: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.7s;
+}
+
+.splash .inner-splash .btn-main:hover::after {
+  filter: brightness(70%);
+}
+
+/* Layout */
+.wrapper {
+  display: flex;
+  margin-left: 10px;
+}
+
+.sidebar {
+  flex: 1 0 0;
+}
+
+.posts {
+  flex: 2 0 0;
+}
+
+.sidebar,
+.posts {
+  background: #fff;
+  margin-right: 10px;
+  padding: 40px;
+  border: 1px solid #000;
+  border-radius: 5px;
+}
+
+/* post */
+.post {
+  display: none;
+}
+
+.post.active {
+  display: block;
+}
+
+/* Lists */
+.list {
+  list-style-type: none;
+  margin: 10px 0 0 0;
+  padding: 0;
+  color: #000;
+  text-align: center;
+}
+
+.list .active {
+  font-weight: bold;
+}
+
+.list li {
+  padding: 2px;
+}
+
+.list a {
+  font-family: "Droid";
+  font-size: 20px;
+  color: #000;
+}
+
+.list a:hover {
+  color: black;
+  opacity: 0.7;
+}
+
+/* logo */
+.blogsection {
+  padding: 120px 80px;
+}
+
+.blogsection .blog .container {
+  margin-bottom: 60px;
+  text-align: center;
+  position: relative;
+}
+
+.blogsection .blog .container .logo {
+  font-size: 48px;
+  font-family: "Montserrat";
+}
+
+.blogsection .blog .container .logo::after {
+  margin-top: 5px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: block;
+  width: 60px;
+  height: 10px;
+  content: " ";
+  background-color: #ff7675;
+}
+
+/* history of nysa */
+.nysa {
+  padding: 120px;
+  background: #f0f0f0;
+}
+
+.nysa p {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 20px;
+  font-family: "Droid";
+}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uL3Nhc3Mvc3R5bGUuc2NzcyIsInN0eWxlLmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFTQTtFQUNFLHVCQUF1QjtBQ1J6Qjs7QURXQTtFQUNFLFNBQVM7RUFDVCxVQUFVO0FDUlo7O0FETUE7RUFJSSxTQUFTO0VBQ1QsVUFBVTtBQ05kOztBRENBO0VBUUksU0FBUztFQUNULFVBQVU7QUNMZDs7QURKQTtFQVlJLHFCQUFxQjtBQ0p6Qjs7QURSQTtFQWdCSSxTQUFTO0VBQ1QsVUFBVTtFQUNWLHFCQUFxQjtBQ0p6Qjs7QURkQTs7Ozs7O0VBMEJJLFVBQVU7RUFDVixTQUFTO0FDSGI7O0FETUE7RUFDRSxlQUFlO0VBQ2YseUJBQXlCO0VBQ3pCLHlCQTNDNEI7RUE0QzVCLGdCQUFnQjtFQUNoQixrQkFBa0I7QUNIcEI7O0FERkE7RUFPSSxvQkFBb0I7RUFDcEIsZ0JBQWdCO0VBQ2hCLGNBQWlDO0FDRHJDOztBRElBO0VBQ0UsaUJBQWlCO0VBQ2pCLGNBQWM7RUFDZCxXQUFXO0VBQ1gsWUFBWTtFQUNaLFlBQVk7RUFDWix5QkF2RGtCO0FDc0RwQjs7QURJQTtFQUNFLHlCQTlENEI7RUErRDVCLHlCQUF5QjtFQUN6QixrQkFBa0I7RUFDbEIsa0JBQWtCO0VBQ2xCLGVBQWU7QUNEakI7O0FESUE7RUFDRSxrQkFBa0I7RUFDbEIsU0FBUztFQUNULFdBQVc7RUFDWCwyQkFBMkI7RUFDM0IsV0FBVztFQUNYLFlBQVk7RUFDWixtQkFBbUI7RUFDbkIsYUFBYTtBQ0RmOztBREtBO0VBQ0UsWUFBWTtFQUNaLGVBQWU7RUFDZixXQUFXO0FDRmI7O0FEREE7RUFNTSxhQUFhO0FDRG5COztBRExBO0VBUVEsT0FBTztFQUNQLGtCQUFrQjtFQUNsQixrQkFBa0I7QUNDMUI7O0FEWEE7RUFZVSxlQUFlO0VBQ2YseUJBOUZvQjtFQStGcEIsV0FqR1E7RUFrR1IsY0FBYztFQUNkLGFBQWE7QUNHdkI7O0FEbkJBO0VBb0JVLDZCQUE2QjtBQ0d2Qzs7QUR2QkE7RUF3QlEsa0JBQWtCO0VBQ2xCLGNBQWM7RUFDZCxzQkE1R1U7RUE2R1YsWUFBWTtFQUNaLFdBQVc7RUFDWCxZQUFZO0VBQ1osTUFBTTtFQUNOLGFBQWE7RUFDYixZQUFZO0VBQ1osZ0JBQWdCO0FDR3hCOztBRHBDQTtFQW9DUSxnQkFBZ0I7RUFDaEIsWUFBWTtBQ0lwQjs7QURHQTtFQUNFLGtCQUFrQjtFQUNsQixTQUFTO0VBQ1Qsd0dBQytCO0VBQy9CLHNCQUFzQjtFQUN0QixhQUFhO0FDRGY7O0FETEE7RUFRSSxrQkFBa0I7RUFDbEIsU0FBUztFQUNULFFBQVE7RUFDUixnQ0FBZ0M7RUFDaEMsa0JBQWtCO0FDQ3RCOztBRGJBO0VBZU0sZUFBZTtFQUNmLFdBL0lZO0VBZ0paLDBCQUEwQjtFQUMxQixtQkFBbUI7QUNFekI7O0FEcEJBO0VBc0JNLGVBQWU7RUFDZixXQXRKWTtFQXVKWix5QkFySndCO0VBc0p4QixpQkFBaUI7QUNFdkI7O0FEM0JBO0VBNkJNLHFCQUFxQjtFQUNyQixnQkFBZ0I7RUFDaEIsa0JBQWtCO0VBQ2xCLFdBL0pZO0VBZ0taLHlCQTlKd0I7RUErSnhCLGVBQWU7RUFDZixpQkFBaUI7RUFDakIsa0JBQWtCO0FDRXhCOztBRHRDQTtFQXdDTSxXQUFXO0VBQ1gsa0JBQWtCO0VBQ2xCLFFBQVE7RUFDUixrQkFBa0I7RUFDbEIsY0FBYztFQUNkLFlBQVk7RUFDWix5QkF4S2M7RUF5S2QsV0FBVztFQUNYLFlBQVk7RUFDWixTQUFTO0VBQ1QsZ0NBQWdDO0VBQ2hDLGdCQUFnQjtBQ0V0Qjs7QURyREE7RUFzRE0sdUJBQXVCO0FDRzdCOztBREVBLFdBQUE7QUFDQTtFQUNFLGFBQWE7RUFDYixpQkFBaUI7QUNDbkI7O0FERUE7RUFDRSxXQUFXO0FDQ2I7O0FERUE7RUFDRSxXQUFXO0FDQ2I7O0FERUE7O0VBRUUsZ0JBMU1nQjtFQTJNaEIsa0JBQWtCO0VBQ2xCLGFBQWE7RUFDYixzQkE1TWdCO0VBNk1oQixrQkFBa0I7QUNDcEI7O0FERUEsU0FBQTtBQUNBO0VBQ0UsYUFBYTtBQ0NmOztBREZBO0VBR0ksY0FBYztBQ0dsQjs7QURDQSxVQUFBO0FBRUE7RUFDRSxxQkFBcUI7RUFDckIsa0JBQWtCO0VBQ2xCLFVBQVU7RUFDVixXQTlOZ0I7RUErTmhCLGtCQUFrQjtBQ0NwQjs7QUROQTtFQU9JLGlCQUFpQjtBQ0dyQjs7QURWQTtFQVdJLFlBQVk7QUNHaEI7O0FEZEE7RUFjSSxvQkF0T2dCO0VBdU9oQixlQUFlO0VBQ2YsV0ExT2M7QUM4T2xCOztBRHBCQTtFQW1CSSxZQUFZO0VBQ1osWUFBWTtBQ0toQjs7QUREQSxTQUFBO0FBRUE7RUFDRSxtQkFBbUI7QUNHckI7O0FESkE7RUFJTSxtQkFBbUI7RUFDbkIsa0JBQWtCO0VBQ2xCLGtCQUFrQjtBQ0l4Qjs7QURWQTtFQVFRLGVBQWU7RUFDZix5QkE1UHNCO0FDa1E5Qjs7QURmQTtFQVlRLGVBQWU7RUFDZixrQkFBa0I7RUFDbEIsU0FBUztFQUNULDJCQUEyQjtFQUMzQixjQUFjO0VBQ2QsV0FBVztFQUNYLFlBQVk7RUFDWixZQUFZO0VBQ1oseUJBcFFZO0FDMlFwQjs7QUREQSxvQkFBQTtBQUNBO0VBQ0UsY0FBYztFQUNkLG1CQUFtQjtBQ0lyQjs7QUROQTtFQUlJLGtCQUFrQjtFQUNsQixnQkFBZ0I7RUFDaEIsZUFBZTtFQUNmLG9CQXBSZ0I7QUMwUnBCIiwiZmlsZSI6InN0eWxlLmNzcyJ9 */
