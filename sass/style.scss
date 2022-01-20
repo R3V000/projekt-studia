@@ -130,7 +130,7 @@ body {
   position: relative;
   margin: 0;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("/images/background.jpg");
+    url("../images/background.jpg");
   background-size: cover;
   height: 100vh;
   .inner-splash {
@@ -267,6 +267,39 @@ body {
         background-color: $main-color;
       }
     }
+
+    .wrapper{
+      .posts{
+        .post-title{
+          font-size:24px;
+          font-family: $font-montserrat;
+        }
+        .post-author{
+          font-size: 16px;
+          font-family: $font-montserrat;
+        }
+        .post{
+          .post-content{
+            display: flex;
+            p{
+              margin-top: 40px;
+              font-family: $font-montserrat;
+              font-size: 14px;
+              flex: 1;
+            }
+            .card-photo{
+              flex: 2;
+              margin: 0 0 0 10px;
+              object-fit: cover;
+              max-width: 500px;
+              max-height: 500px;
+              border-radius: 15%;
+              border: 2px solid black;
+            }
+          }
+        }
+      }
+    }
   }
 }
 
@@ -279,5 +312,74 @@ body {
     margin-top: 40px;
     font-size: 20px;
     font-family: $font-droid;
+  }
+}
+
+
+/* authors */
+.authors{
+  margin-bottom: 140px;
+  .container{
+    .wrapper_of_authors{
+      margin-top: 60px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      .author{
+        max-width: 300px;
+        margin: 40px;
+        flex: 1;
+        .card{
+          display: flex;
+          flex-direction: column;
+          .card-image{
+            position: relative;
+            margin-top: 15px;
+            text-align: center;
+            img{
+              max-width: 100px;
+              max-height:100px;
+              border-radius: 50%;
+            }
+          }
+          .card-image::before{
+            
+            position: absolute;
+            content: "";
+            width: 110px;
+            height: 110px;
+            background: $main-color;
+            z-index: -1;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            border-radius: 100%;
+          }
+          .card-text{
+            text-align: center;
+            margin-top: 15px;
+            font-size: 12px;
+            font-family: $font-montserrat;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* sources */
+.sources {
+  margin-top: 70px;
+  margin-bottom:140px;
+  .sources-wrapper{
+    margin-top: 40px;
+    display:flex;
+    flex-direction:row;
+    justify-content: center;
+    .source{
+      flex: 1;
+      max-width: 300px;
+      text-align: center;
+    }
   }
 }

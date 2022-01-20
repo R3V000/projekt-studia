@@ -97,16 +97,31 @@ const highlightMenu = function(){
         homeMenu.classList.add('highlight');
         nysaMenu.classList.remove('highlight');
         zabytkiMenu.classList.remove('highlight');
+        authorsMenu.classList.remove('highlight');
         return
     } else if (window.innerWidth > 960 && scrollPos > 600 && scrollPos < 1100){
         homeMenu.classList.remove('highlight');
         nysaMenu.classList.add('highlight');
         zabytkiMenu.classList.remove('highlight');
+        authorsMenu.classList.remove('highlight');
         return
     } else if (window.innerWidth > 960 && scrollPos > 1100 && scrollPos < 1500){
         nysaMenu.classList.remove('highlight');
         zabytkiMenu.classList.add('highlight');
+        authorsMenu.classList.remove('highlight');
         return
+    } else if (window.innerWidth > 960 && scrollPos > 1500 && scrollPos < 1800){
+        authorsMenu.classList.add('highlight');
+        nysaMenu.classList.remove('highlight');
+        homeMenu.classList.remove('highlight');
+        zabytkiMenu.classList.remove('highlight');
+        sourcesMenu.classList.remove('highlight');
+        return
+    } else if (window.innerWidth > 960 && scrollPos > 1800){
+        sourcesMenu.classList.add('highlight');
+        nysaMenu.classList.remove('highlight');
+        homeMenu.classList.remove('highlight');
+        zabytkiMenu.classList.remove('highlight');
     }
 }
 
